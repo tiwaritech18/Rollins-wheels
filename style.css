@@ -125,12 +125,50 @@ img{
     gap: 1rem;
     flex-wrap: wrap;
   }
+  .blog-text p{
+    font-size: 15px;
+  }
+ 
+  .blog-section h1{
+    margin: 1.5rem;
+    font-size: 35px;
+  }
+  
+  .blog img{
+    width: 200px;
+  }
+  .container{
+    width: 90%;
+  }
 
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:982px){
   .about-desc p{
     max-width: 500px;
     font-size: 14px;
+  }
+  .blog-section{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+   
+  }
+  .blog-sec{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .blog-text p{
+    font-size: 13px;
+  }
+  .blog-section-main{
+    text-align: center;
+  }
+ 
+
+  .blog img{
+    width: 200px;
+    border-radius: 20px;
   }
 }
 @media screen and (max-width:526px){
@@ -144,6 +182,7 @@ img{
     position: relative; /* Add this line */
     z-index: 2;
   }
+ 
   
 }
 @media screen and (max-width:444px){
@@ -311,6 +350,39 @@ img{
   gap: 2rem;
   margin: 3rem;
 }
+.blog-section{
+  height: 40vh;
+  display: flex;
+  align-items: center;
+ 
+}
+.blog-sec{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.blog-text p{
+  font-weight: var(--weightExtralight300);
+  margin: 0.4rem;
+}
+.blog-text h5{
+  margin: 0.4rem;
+}
+.blog-section-main{
+  display: flex;
+  justify-content: space-between;
+}
+.blog-section h1{
+  margin: 2rem;
+
+}
+.blog{
+  margin: 0 auto;
+  width: 100%;
+}
+.blog img{
+  width: 300px;
+}
 footer{
   background-color: black;
 }
@@ -346,3 +418,4 @@ footer h2{
   font-weight: var(--weightBold);
   color: var(--color-text-extralight);
 }
+
