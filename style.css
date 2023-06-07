@@ -94,10 +94,24 @@ img{
 .hamburger-menu{
   display: none;
 }
+#close{
+  display: none;
+}
 /* MEDIA QUERIES */
 @media screen and (max-width:1380px){
 
+  .navbar-links{
+    border: 1px solid;
+    display: none;
+    position: relative;
+  }
+  .navbar-links.active{
+    display: flex;
+  }
+  #hamburger-btn.active{
+    display: none;
 
+  }
   .hamburger-menu{
     display: block;
     border-radius: 10px;
@@ -110,9 +124,23 @@ img{
   .navbar h2{
     font-size: 30px;
   }
+  #close.active{
+    display: block;
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    right:0px;
+    overflow: hidden;
+    padding: 0.5rem;
+    font-weight:var(--weightBold) ;
+    border: 0;
+    background-color:wheat;
+    border-radius: 15px;
+    top: 0;
+  }
 
 }
-@media screen and (max-width:1120px){
+@media screen and (max-width:1190px){
   
   .navbar-links{
     border: 1px solid;
@@ -120,7 +148,6 @@ img{
   }
   .navbar-links.active{
     display: flex;
- 
   }
   #hamburger-btn.active{
     display: none;
@@ -128,20 +155,27 @@ img{
   }
   .navbar-links-ul{
     display: flex;
-    max-width: 200px;
-    flex-direction: column;
+  }
+  .navbar-links-ul li{
+    font-size: small;
   }
   .navbar-links{
     position: relative;
+    align-items: center;
+    width: 600px;
   }
-  #close{
+  #close.active{
+    display: flex;
     position: absolute;
-    right: 5px;
+    right: 0px;
     padding: 0.5rem;
     border: 0;
+    font-weight: var(--weightBold);
+    font-size: medium;
     background-color:wheat;
     border-radius: 5px;
-    top: 5px;
+    top: 0px;
+    align-items:center;
   }
   .about-desc{
     display: flex;
@@ -158,7 +192,10 @@ img{
     flex-wrap: wrap;
   }
   .blog-text p{
-    font-size: 15px;
+    font-size: small;
+  }
+  .blog-text h5{
+    font-size: x-small;
   }
  
   .blog-section h1{
@@ -172,17 +209,63 @@ img{
   .container{
     width: 90%;
   }
+  .footer-section h2{
+    font-size: 30px;
+  }
+  .footer-section div p{
+    font-size: small;
+  }
+  .links{
+    font-size: small;
+  }
 
 }
 @media screen and (max-width:982px){
+  .navbar-links{
+    height: 400px;
+    width: 200px;
+  }
+  .navbar-links.active{
+    display: flex;
+  }
+  #hamburger-btn.active{
+    display: none;
+  }
+  .navbar-links-ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-links-ul li{
+    font-size: small;
+  }
+  .navbar-links{
+    position: relative;
+
+  }
+  #close.active{
+    width: 15px;
+    height: 18px;
+    text-align: center;
+    font-size: small;
+    position: absolute;
+    top: 50px;
+    border-radius:50%;
+    right: 3px;
+    width: fit-content;
+  }
   .about-desc p{
     max-width: 500px;
     font-size: 14px;
   }
+  .blog-section-main{
+    display: flex;
+  flex-wrap: wrap; 
+
+ }
   .blog-section{
-    height: 40vh;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
    
   }
   .blog-sec{
@@ -194,6 +277,7 @@ img{
     font-size: 13px;
   }
   .blog-section-main{
+    
     text-align: center;
   }
  
@@ -208,6 +292,23 @@ img{
     max-width: 350px;
     font-size: 12px;
   }
+  .navbar-links{
+    height: 100%;
+    background-color: var(--color-bg);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  #close.active{
+    top: 30%;
+    right: 20%;
+    padding: 10px;
+  
+  }
   .about-right-img img {
     width: 300px;
     height: 300px;
@@ -218,6 +319,14 @@ img{
   
 }
 @media screen and (max-width:444px){
+  .brand-tag h1{
+  font-size: 35px !important;
+  }
+  .footer-section{
+    display: flex    ;
+    flex-direction: column;
+    height: 100%;
+  }
   .about-desc p{
     max-width: 350px;
     font-size: 12px;
@@ -383,8 +492,9 @@ img{
   margin: 3rem;
 }
 .blog-section{
-  height: 40vh;
+  height: 80vh;
   display: flex;
+  text-align: center;
   align-items: center;
  
 }
@@ -402,7 +512,9 @@ img{
 }
 .blog-section-main{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
 }
 .blog-section h1{
   margin: 2rem;
@@ -425,7 +537,7 @@ footer{
   align-items: center;
   margin-top: 3rem;
   color: white;
-  height: 40vh;
+  height: 70vh;
 }
 .footer-section div{
   gap: 1rem;
